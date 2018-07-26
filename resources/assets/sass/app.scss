@@ -1,0 +1,92 @@
+@import '~bootstrap/scss/bootstrap';
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
+@import 'variables';
+@import 'fonts';
+
+.formstack {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-ibm;
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .formstack-docs {
+            flex-grow: 1;
+            display: flex;
+
+            .docs-links {
+                background: linear-gradient(to left, #44ab44 0%,#56b043 100%);
+                padding: 5px;
+                border-right: 3px solid darken($fs-green, 10%);
+                flex-shrink: 0;
+
+                .links-group {
+                    background: $light-gray;
+                    border-radius: 5px;
+                    padding: 2px;
+                    margin-bottom: 3px;
+
+                    .group-title {
+                        font-size: 1.3em;
+                        font-family: $font-zilla;
+                        margin-bottom: 0px;
+                    }
+
+                    .link {
+                        background: darken($cream, 5%);
+                        border-radius: 5px;
+                        padding: 5px;
+                        margin-bottom: 1px;
+
+                        &.active {
+                            background: $cream;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            background: $cream;
+                        }
+
+                        p {
+                            margin: 0px;
+                        }
+
+                        .url {
+                            font-weight: 700;
+                        }
+
+                        .description {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+
+            .placeholder {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-zilla;
+                line-height: 1.1;
+                font-size: 5em;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .docs-area {
+                flex-grow: 1;
+                padding: 10px;
+            }
+        }
+    }
+
+    .footer {
+
+    }
+}
